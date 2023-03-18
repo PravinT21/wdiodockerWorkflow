@@ -18,5 +18,11 @@ jobs:
             node-version: 18
         - name: Install
           run: npm install
+        - name: Versioncheck
+          run: |
+               node --version
+               npm  --version
+               chrome --version
+               lsb_release -a
         - name: Test
           run: npm run wdio
