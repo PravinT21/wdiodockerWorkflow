@@ -16,13 +16,13 @@ jobs:
         - uses: actions/setup-node@v3
           with:
             node-version: 18
-        - name: Install
-          run: npm install
         - name: Versioncheck
           run: |
                node --version
                npm  --version
                chrome --version
                lsb_release -a
+        - name: Install
+          run: npm install
         - name: Test
           run: npm run wdio
